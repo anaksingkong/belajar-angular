@@ -1,1 +1,23 @@
-<p>sidebar works!</p>
+<!-- menampilkan title dengan ngIf -->
+<h4 *ngIf="displayTitle">
+    Author Name: {{ name }}
+</h4>
+
+<!-- menenekan tombol jika ingin melihat author -->
+<button (click)="eventClick()">
+    Tampilkan Author
+</button>
+
+
+<!-- menambahkan item selanjutnya dengan menekan tombol add item -->
+<div class="btn">
+    <button (click)="addItem()">
+        Add item
+    </button>
+</div>
+
+<!-- menampilkan items array dengan ngFor -->
+<h5 *ngFor="let item of items">
+    {{ item }}
+</h5>
+
